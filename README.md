@@ -8,7 +8,7 @@ multiple backups.
 
 ## Usage
 
-1. Download the script and place it in a directory of your choice.
+1. Download the script `SaveGameBackup.ps1` and place it in a directory of your choice.
 2. Open the script in a text editor and change the value of the `$backup_folder` variable to the directory 
    you want to back up to.
 3. Add your games to the `$save_games` array, using the format:
