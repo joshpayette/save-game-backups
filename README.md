@@ -18,6 +18,10 @@ multiple backups.
 4. Save the script.
 5. Run the script by right-clicking it and selecting `Run with Powershell`.
 
+### Note
+
+You do not have to use the variables that I use for referencing system paths. The reason that exists is so that my hardcoded Windows folder path does not get committed to the repo. They should absolutely work for you, but don't hesitate to just paste your entire specific path to whatever save game location you want covered.
+
 ## Scheduling the script to run automatically
 
 1. Open Task Scheduler as administrator.
