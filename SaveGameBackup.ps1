@@ -10,6 +10,9 @@ $USER_PROFILE = "$($env:USERPROFILE)"
 $ROAMING_APPDATA = "$($env:APPDATA)"
 $LOCAL_APPDATA = "$($env:LOCALAPPDATA)"
 $LOCALLOW_APPDATA = "$($LOCAL_APPDATA)".replace("Local", "LocalLow")
+$DOCUMENTS = "$([Environment]::GetFolderPath('MyDocuments'))"
+# Be sure to update this to your Steam folder
+$STEAM_COMMON = "F:\Steam\steamapps\common"
 
 # Change this to the folder where you want to store your backups
 $backup_folder = "$DESKTOP\SaveGameBackup"
@@ -17,8 +20,11 @@ $backup_folder = "$DESKTOP\SaveGameBackup"
 # Add your save games here
 $save_games = @(
   [SaveGame]@{ Name = "Aeterna Noctis"; SavePath = "$LOCALLOW_APPDATA\AeternaTheGame\Aeterna Noctis" }
+  [SaveGame]@{ Name = "Dead Cells"; SavePath = "$STEAM_COMMON\Dead Cells\save" }
   [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
   [SaveGame]@{ Name = "Everspace 2"; SavePath = "$LOCAL_APPDATA\ES2\Saved\SaveGames" }
+  [SaveGame]@{ Name = "Hades"; SavePath = "$DOCUMENTS\Saved Games\Hades" }
+  [SaveGame]@{ Name = "Have a Nice Death"; SavePath = "$LOCALLOW_APPDATA\MagicDesignStudio\HaveANiceDeath" }
   [SaveGame]@{ Name = "Hollow Knight"; SavePath = "$LOCALLOW_APPDATA\Team Cherry\Hollow Knight" }
   [SaveGame]@{ Name = "Remnant 2"; SavePath = "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950" }
 )
