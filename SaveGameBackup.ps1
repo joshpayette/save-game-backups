@@ -24,8 +24,10 @@ $save_games = @(
   [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
   [SaveGame]@{ Name = "Everspace 2"; SavePath = "$LOCAL_APPDATA\ES2\Saved\SaveGames" }
   [SaveGame]@{ Name = "Hades"; SavePath = "$DOCUMENTS\Saved Games\Hades" }
+  [SaveGame]@{ Name = "Hades 2"; SavePath = "$USER_PROFILE\Saved Games\Hades II" }
   [SaveGame]@{ Name = "Have a Nice Death"; SavePath = "$LOCALLOW_APPDATA\MagicDesignStudio\HaveANiceDeath" }
   [SaveGame]@{ Name = "Hollow Knight"; SavePath = "$LOCALLOW_APPDATA\Team Cherry\Hollow Knight" }
+  [SaveGame]@{ Name = "Horizon Zero Dawn"; SavePath = "$DOCUMENTS\Horizon Zero Dawn\Saved Game" }
   [SaveGame]@{ Name = "Remnant 2"; SavePath = "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950" }
 )
 
@@ -46,6 +48,10 @@ foreach ($save_game in $save_games) {
   New-Item -ItemType Directory -Force -Path $save_game_folder
   Copy-Item -Path $save_game.SavePath -Destination $save_game_folder -Recurse
 }
+
+# Clone the Remnant 2 folder to the alt account
+Write-Host "Cloning Remnant 2 main account to alt account"
+Copy-Item -Path "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950\*" -Destination "$USER_PROFILE\Saved Games\Remnant2\Steam\1720142546" -Recurse
 
 Write-Host "Backup complete: $new_backup_folder" -ForegroundColor Green
 
