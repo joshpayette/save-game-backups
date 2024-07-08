@@ -20,6 +20,8 @@ $backup_folder = "$DESKTOP\SaveGameBackup"
 # Add your save games here
 $save_games = @(
   [SaveGame]@{ Name = "Aeterna Noctis"; SavePath = "$LOCALLOW_APPDATA\AeternaTheGame\Aeterna Noctis" }
+  [SaveGame]@{ Name = "Baldur's Gate 3"; SavePath = "$LOCAL_APPDATA\Larian Studios\Baldur's Gate 3\PlayerProfiles" }
+  [SaveGame]@{ Name = "Dave the Diver"; SavePath = "$LOCALLOW_APPDATA\nexon\DAVE THE DIVER\SteamSData\3043950" }
   [SaveGame]@{ Name = "Dead Cells"; SavePath = "$STEAM_COMMON\Dead Cells\save" }
   [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
   [SaveGame]@{ Name = "Everspace 2"; SavePath = "$LOCAL_APPDATA\ES2\Saved\SaveGames" }
@@ -29,7 +31,6 @@ $save_games = @(
   [SaveGame]@{ Name = "Hollow Knight"; SavePath = "$LOCALLOW_APPDATA\Team Cherry\Hollow Knight" }
   [SaveGame]@{ Name = "Horizon Zero Dawn"; SavePath = "$DOCUMENTS\Horizon Zero Dawn\Saved Game" }
   [SaveGame]@{ Name = "Remnant 2"; SavePath = "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950" }
-  [SaveGame]@{ Name = "Baldur's Gate 3"; SavePath = "$LOCAL_APPDATA\Larian Studios\Baldur's Gate 3\PlayerProfiles" }
 )
 
 # Create the backup folder if it doesn't exist
