@@ -21,6 +21,7 @@ $backup_folder = "$DESKTOP\SaveGameBackup"
 $save_games = @(
   [SaveGame]@{ Name = "Aeterna Noctis"; SavePath = "$LOCALLOW_APPDATA\AeternaTheGame\Aeterna Noctis" }
   [SaveGame]@{ Name = "Baldur's Gate 3"; SavePath = "$LOCAL_APPDATA\Larian Studios\Baldur's Gate 3\PlayerProfiles" }
+  [SaveGame]@{ Name = "Bo, Path of the Teal Lotus"; SavePath = "$LOCALLOW_APPDATA\Squid Shock Studios\Bo" }
   [SaveGame]@{ Name = "Dave the Diver"; SavePath = "$LOCALLOW_APPDATA\nexon\DAVE THE DIVER\SteamSData\3043950" }
   [SaveGame]@{ Name = "Dead Cells"; SavePath = "$STEAM_COMMON\Dead Cells\save" }
   [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
