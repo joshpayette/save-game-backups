@@ -31,6 +31,7 @@ $save_games = @(
   [SaveGame]@{ Name = "Have a Nice Death"; SavePath = "$LOCALLOW_APPDATA\MagicDesignStudio\HaveANiceDeath" }
   [SaveGame]@{ Name = "Hollow Knight"; SavePath = "$LOCALLOW_APPDATA\Team Cherry\Hollow Knight" }
   [SaveGame]@{ Name = "Horizon Zero Dawn"; SavePath = "$DOCUMENTS\Horizon Zero Dawn\Saved Game" }
+  [SaveGame]@{ Name = "Nine Sols"; SavePath = "$LOCALLOW_APPDATA\RedCandleGames\NineSols" }
   [SaveGame]@{ Name = "Remnant 2"; SavePath = "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950" }
 )
 
