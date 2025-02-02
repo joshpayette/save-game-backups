@@ -12,25 +12,29 @@ $LOCAL_APPDATA = "$($env:LOCALAPPDATA)"
 $LOCALLOW_APPDATA = "$($LOCAL_APPDATA)".replace("Local", "LocalLow")
 $DOCUMENTS = "$([Environment]::GetFolderPath('MyDocuments'))"
 # Be sure to update this to your Steam folder
-$STEAM_COMMON = "F:\Steam\steamapps\common"
+$STEAM_COMMON = "E:\SteamLibrary\steamapps\common"
 
 # Change this to the folder where you want to store your backups
 $backup_folder = "$DESKTOP\SaveGameBackup"
 
+# TODO Add Ender Lillies
+
 # Add your save games here
 $save_games = @(
   [SaveGame]@{ Name = "Aeterna Noctis"; SavePath = "$LOCALLOW_APPDATA\AeternaTheGame\Aeterna Noctis" }
-  [SaveGame]@{ Name = "Baldur's Gate 3"; SavePath = "$LOCAL_APPDATA\Larian Studios\Baldur's Gate 3\PlayerProfiles" }
+  # [SaveGame]@{ Name = "Baldur's Gate 3"; SavePath = "$LOCAL_APPDATA\Larian Studios\Baldur's Gate 3\PlayerProfiles" }
   [SaveGame]@{ Name = "Bo, Path of the Teal Lotus"; SavePath = "$LOCALLOW_APPDATA\Squid Shock Studios\Bo" }
   [SaveGame]@{ Name = "Dave the Diver"; SavePath = "$LOCALLOW_APPDATA\nexon\DAVE THE DIVER\SteamSData\3043950" }
   [SaveGame]@{ Name = "Dead Cells"; SavePath = "$STEAM_COMMON\Dead Cells\save" }
-  [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
+  # [SaveGame]@{ Name = "Elden Ring"; SavePath = "$ROAMING_APPDATA\EldenRing\76561197963309678" }
+  [SaveGame]@{ Name = "Ender Lilies"; SavePath = "$LOCAL_APPDATA\EnderLilies\Saved\SaveGames" }
+  [SaveGame]@{ Name = "Ender Magnolia"; SavePath = "$LOCAL_APPDATA\EnderMagnolia\Saved\SaveGames" }
   [SaveGame]@{ Name = "Everspace 2"; SavePath = "$LOCAL_APPDATA\ES2\Saved\SaveGames" }
   [SaveGame]@{ Name = "Hades"; SavePath = "$DOCUMENTS\Saved Games\Hades" }
   [SaveGame]@{ Name = "Hades 2"; SavePath = "$USER_PROFILE\Saved Games\Hades II" }
   [SaveGame]@{ Name = "Have a Nice Death"; SavePath = "$LOCALLOW_APPDATA\MagicDesignStudio\HaveANiceDeath" }
   [SaveGame]@{ Name = "Hollow Knight"; SavePath = "$LOCALLOW_APPDATA\Team Cherry\Hollow Knight" }
-  [SaveGame]@{ Name = "Horizon Zero Dawn"; SavePath = "$DOCUMENTS\Horizon Zero Dawn\Saved Game" }
+  # [SaveGame]@{ Name = "Horizon Zero Dawn"; SavePath = "$DOCUMENTS\Horizon Zero Dawn\Saved Game" }
   [SaveGame]@{ Name = "Nine Sols"; SavePath = "$LOCALLOW_APPDATA\RedCandleGames\NineSols" }
   [SaveGame]@{ Name = "Prince of Persia Lost Crown"; SavePath = "$DOCUMENTS\My Games\Prince Of Persia The Lost Crown" }
   [SaveGame]@{ Name = "Remnant 2"; SavePath = "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950" }
@@ -55,8 +59,8 @@ foreach ($save_game in $save_games) {
 }
 
 # Clone the Remnant 2 folder to the alt account
-Write-Host "Cloning Remnant 2 main account to alt account"
-Copy-Item -Path "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950\*" -Destination "$USER_PROFILE\Saved Games\Remnant2\Steam\1720142546" -Recurse
+# Write-Host "Cloning Remnant 2 main account to alt account"
+# Copy-Item -Path "$USER_PROFILE\Saved Games\Remnant2\Steam\3043950\*" -Destination "$USER_PROFILE\Saved Games\Remnant2\Steam\1720142546" -Recurse
 
 Write-Host "Backup complete: $new_backup_folder" -ForegroundColor Green
 
